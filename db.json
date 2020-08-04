@@ -1,0 +1,16 @@
+{
+  "movies": [
+    {
+      "name": "Man of steel - SAGA",      
+      "id": 1
+    },
+    {
+      "name": "Batman vs Superman - SAGA",      
+      "id": 2
+    },
+    {
+      "name": "Snyder Cut - SAGA",      
+      "id": 3
+    }
+  ]
+}
