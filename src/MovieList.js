@@ -16,6 +16,8 @@ const List = style.ul`
 `;
 const ListItem = style.li`
     list-style: none;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.795);
     display: flex;
     justify-content: space-around;
     border: 1px solid #ddd;
@@ -28,7 +30,14 @@ const ListItem = style.li`
     width: 80%;    
     transition: opacity .3s;     
     transition-delay: ${({delay}) => `${delay}ms`};     
-    opacity: ${({ isVisible }) => isVisible ? 1 : 0};
+    opacity: ${({ isVisible }) => isVisible ? 1 : 0};   
+    
+
+    &:hover{
+      background-color: rgba(0,0,0,0.1); 
+      transition: background-color .5s;          
+    };
+      
 `;
 
 const MovieList = ({ movies = {}}) => {
