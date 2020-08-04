@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { requestMovieList } from './store/actions';
 
+import AddMovie from './AddMovie';
 import Movie from './Movie';
+
 import style from 'styled-components';
 import './App.css';
 
@@ -63,13 +65,16 @@ const MovieList = ({ movies = {}}) => {
     
     
   return (    
-     <List> 
+    <>
+      <AddMovie/>
+      <List> 
         {movies.data.map((movie, index) => (
-           <ListItem key={movie.id} isVisible={listVisibility} delay={index*150}>
-              <Movie movie={movie} />              
-          </ListItem>
-        ))}
+         <ListItem key={movie.id} isVisible={listVisibility} delay={index*150}>
+            <Movie movie={movie} />
+         </ListItem>           
+       ))}
      </List>        
+    </>
   );
 }
 

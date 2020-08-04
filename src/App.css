@@ -27,9 +27,8 @@
 }
 
 .App-button:hover{
-  box-shadow:0 14px 6px 0 rgba(93,93,93,.25), 0 1px 3px 0 rgba(0,0,0,.15);
   background-color:#727883;
-  transition:opacity 1s cubic-bezier(.645,.045,.355,1),-webkit-transform .8s cubic-bezier(.645,.045,.355,1);
+  transition: background-color .5s;
 }
 
 nav {

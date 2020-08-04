@@ -24,6 +24,22 @@ export const movies = (state = initialState, action) => {
                 ...state,
                 loading: false,              
             };
+        case 'REQUEST_ADD_MOVIE':          
+            const { movie } = payload;      
+            return {
+                ...state,                      
+                data: state.data.concat(movie),
+            };  
+        case 'SUCCESS_ADD_MOVIE':
+            return {
+                ...state,
+                loading: false,              
+            };       
+        case 'FAILURE_ADD_MOVIE':
+            return {
+                ...state,
+                loading: false,              
+            };        
         default:
             return state;
     }

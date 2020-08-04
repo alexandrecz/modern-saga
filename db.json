@@ -1,16 +1,28 @@
 {
   "movies": [
     {
-      "name": "Man of steel - SAGA",      
+      "name": "Man of steel",
       "id": 1
     },
     {
-      "name": "Batman vs Superman - SAGA",      
-      "id": 2
+      "name": "Flash",
+      "price": "22",
+      "id": 1596573603992
     },
     {
-      "name": "Snyder Cut - SAGA",      
-      "id": 3
+      "name": "Aquaman",
+      "price": "22",
+      "id": 1596573690960
+    },
+    {
+      "name": "Wonder",
+      "price": "50",
+      "id": 1596574672510
+    },
+    {
+      "name": "Cyborg",
+      "price": "12",
+      "id": 1596574738734
     }
   ]
 }

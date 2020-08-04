@@ -20,7 +20,7 @@ const Home = () => {
     useEffect(() => {
         setTimeout(() => {
             toggleVisibility();
-        }, 500);     
+        }, 250);     
     })
 
     return (
