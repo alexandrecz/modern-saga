@@ -49,22 +49,18 @@ const MovieList = ({ movies = {}}) => {
 
     useEffect(() => {
         dispatch(requestMovieList());
-                
+      // eslint-disable-next-line        
     },[])
     
     
-  return (
-    <>
-      <div></div>
-      <List> 
+  return (    
+     <List> 
         {movies.data.map((movie, index) => (
            <ListItem key={movie.id} isVisible={listVisibility} delay={index*150}>
               <Movie movie={movie} />              
           </ListItem>
         ))}
-     </List>
-    </>
-    
+     </List>        
   );
 }
 
