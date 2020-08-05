@@ -39,7 +39,23 @@ export const movies = (state = initialState, action) => {
             return {
                 ...state,
                 loading: false,              
-            };        
+            };
+        case 'REQUEST_DELETE_MOVIE':          
+         const { movie: movieToRemove } = payload;     
+            return {
+                ...state,                      
+                data: state.data.filter(movie => movie.id !== movieToRemove.id),
+            };  
+        case 'SUCCESS_DELETE_MOVIE':
+            return {
+                ...state,
+                loading: false,              
+            };       
+        case 'FAILURE_DELETE_MOVIE':
+            return {
+                ...state,
+                loading: false,              
+            }; 
         default:
             return state;
     }

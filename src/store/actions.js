@@ -25,3 +25,16 @@ export const successAddMovie = () => ({
 export const failureAddMovie = () => ({
     type: 'FAILURE_ADD_MOVIE',     
 });
+
+export const requestDeleteMovie = movie => ({
+    type: 'REQUEST_DELETE_MOVIE',
+    payload: { movie },              
+});
+
+export const successDeleteMovie = () => ({
+    type: 'SUCCESS_DELETE_MOVIE',     
+});
+
+export const failureDeleteMovie = () => ({
+    type: 'FAILURE_DELETE_MOVIE',     
+});
