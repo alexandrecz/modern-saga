@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { requestMovieList } from './store/actions';
+import { useHistory } from "react-router-dom";
 
 import AddMovie from './AddMovie';
 import Movie from './Movie';
@@ -63,13 +64,18 @@ const MovieList = ({ movies = {}}) => {
       // eslint-disable-next-line        
     },[])
     
+    let history = useHistory();
+
+    const redirectTo = id => {
+      history.push(`/movies/${id}`);      
+    }
     
   return (    
     <>
       <AddMovie/>
       <List> 
         {movies.data.map((movie, index) => (
-         <ListItem key={movie.id} isVisible={listVisibility} delay={index*150}>
+         <ListItem key={movie.id} isVisible={listVisibility} delay={index*150} onClick={()=> redirectTo(movie.id)} >
             <Movie movie={movie} />
          </ListItem>           
        ))}
