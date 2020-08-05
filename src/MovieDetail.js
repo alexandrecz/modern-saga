@@ -55,7 +55,11 @@ const MovieDetail = ({ match }) => {
 
     const deleteMovie = () => {
       dispatch(requestDeleteMovie(movie));
-      history.goBack();      
+      
+      setTimeout(() => {
+        history.goBack();      
+      }, 300); 
+      
     }
     
 
