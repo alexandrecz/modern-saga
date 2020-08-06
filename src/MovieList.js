@@ -6,42 +6,9 @@ import { useHistory } from "react-router-dom";
 import AddMovie from './AddMovie';
 import Movie from './Movie';
 
-import style from 'styled-components';
-import './App.css';
+import { List, ListItem } from './components';
 
 
-const List = style.ul`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0;
-`;
-const ListItem = style.li`
-    list-style: none;
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.795);
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 6px 3px rgba(0,0,0,0.1);
-    font-size: 1.4rem;
-    font-weight: bold;    
-    padding:2px;
-    margin-bottom: 20px;
-    width: 80%;    
-    transition: opacity .3s;     
-    transition-delay: ${({delay}) => `${delay}ms`};     
-    opacity: ${({ isVisible }) => isVisible ? 1 : 0};   
-    
-
-    &:hover{
-      background-color: rgba(0,0,0,0.1); 
-      transition: background-color .5s;          
-    };
-      
-`;
 
 const MovieList = ({ movies = {}}) => {
     

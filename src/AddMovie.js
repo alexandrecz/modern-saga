@@ -1,30 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { requestAddMovie } from './store/actions';
-import style from 'styled-components';
-
-const Form = style.form`
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 18vh;
-    width: 80%;  
-    margin: auto;
-    border-bottom: 2px solid slategrey; 
-    transition: opacity .3s;     
-    transition-delay: 150ms;     
-    opacity: ${({ isVisible }) => isVisible ? 1 : 0}; 
-`;
-
-const Input = style.input`
-    font-size: 16px;
-    padding: 14px;
-    margin-right: 30px;
-    border: none;
-    border-bottom: 2px solid #ddd;    
-    width: 350px;
-    outline: none;
-`;
+import { Form, Input, AppButton } from './components';
 
 
 const AddMovie = () => {
@@ -71,7 +48,7 @@ const AddMovie = () => {
                 value={name} 
                 onChange={updateName}/>           
             
-            <button className="App-button">Add Movie</button>
+            <AppButton>Add Movie</AppButton>
         </Form>
 
     );

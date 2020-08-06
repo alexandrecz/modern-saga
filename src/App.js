@@ -3,13 +3,13 @@ import Nav from './Nav';
 import Home from './Home';
 import MovieList from "./MovieList";
 import MovieDetail from "./MovieDetail";
-import './App.css';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div>
       <Nav/>
       <Switch>
         <Route path="/" exact component={Home}/>

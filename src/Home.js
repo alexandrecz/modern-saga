@@ -1,16 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import style from 'styled-components';
+import { Welcome } from './components';
 
 
-const Div = style.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    transition: opacity .3s;     
-    transition-delay: 150ms;     
-    opacity: ${({ isVisible }) => isVisible ? 1 : 0};    
-`;
 
 const Home = () => {
 
@@ -24,9 +15,9 @@ const Home = () => {
     })
 
     return (
-        <Div isVisible={divVisibility}>
+        <Welcome isVisible={divVisibility}>
           <h1>Welcome to SAGA exercise</h1>
-        </Div>
+        </Welcome>
     )
 }
 

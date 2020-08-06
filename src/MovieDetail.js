@@ -3,28 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { requestDeleteMovie } from './store/actions';
 import { useHistory } from "react-router-dom";
 
-import style from 'styled-components';
-import './App.css';
+import { Card, AppButtonAction } from './components';
 
 
-const Div = style.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px auto auto auto;    
-    padding: 2px;
-    background-color: rgba(0,0,0,0.1); 
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 6px 3px rgba(0,0,0,0.1);
-    font-size: 1.4rem;
-    font-weight: bold;    
-    width: 80%;  
-    transition: opacity .3s;     
-    transition-delay: 150ms;     
-    opacity: ${({ isVisible }) => isVisible ? 1 : 0};  
-`;
 
 const MovieDetail = ({ match }) => {
 
@@ -64,9 +45,9 @@ const MovieDetail = ({ match }) => {
     
 
     return (
-        <Div isVisible={divVisibility}>
+        <Card isVisible={divVisibility}>
           <h3>{movie.name}</h3>
-          <button className="App-button_action" onClick={()=> deleteMovie()}>
+          <AppButtonAction onClick={()=> deleteMovie()}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -79,8 +60,8 @@ const MovieDetail = ({ match }) => {
               />
               <path d="M0 0h24v24H0z" fill="none" />
             </svg>
-          </button>
-        </Div>
+          </AppButtonAction>
+        </Card>
     )
 }
 
